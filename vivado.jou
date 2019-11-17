@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 17 20:30:06 2019
+# Process ID: 13554
+# Current directory: /home/2018csb1111/cs203FinalProject
+# Command line: vivado
+# Log file: /home/2018csb1111/cs203FinalProject/vivado.log
+# Journal file: /home/2018csb1111/cs203FinalProject/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/2018csb1111/cs203FinalProject/project_1 -part xc7a35tcpg236-1
