@@ -1,0 +1,58 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Nov 17 20:30:06 2019
+# Process ID: 13554
+# Current directory: /home/2018csb1111/cs203FinalProject
+# Command line: vivado
+# Log file: /home/2018csb1111/cs203FinalProject/vivado.log
+# Journal file: /home/2018csb1111/cs203FinalProject/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_1 /home/2018csb1111/cs203FinalProject/project_1 -part xc7a35tcpg236-1
+file mkdir /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v
+update_compile_order -fileset sources_1
+file mkdir /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v w ]
+add_files -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
+file delete -force /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v] -no_script -reset -force -quiet
+remove_files  /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
+file delete -force /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
+update_compile_order -fileset sources_1
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v w ]
+add_files -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v
+update_compile_order -fileset sim_1
+launch_simulation
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/bcdmain.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/bcdmain.v
+update_compile_order -fileset sources_1
+close_sim

@@ -2,283 +2,330 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Nov 17 20:30:06 2019
-# Process ID: 13554
+# Start of session at: Wed Nov 20 20:21:15 2019
+# Process ID: 3453
 # Current directory: /home/2018csb1111/cs203FinalProject
 # Command line: vivado
 # Log file: /home/2018csb1111/cs203FinalProject/vivado.log
 # Journal file: /home/2018csb1111/cs203FinalProject/vivado.jou
 #-----------------------------------------------------------
 start_gui
-create_project project_1 /home/2018csb1111/cs203FinalProject/project_1 -part xc7a35tcpg236-1
+open_project /home/2018csb1111/cs203FinalProject/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from '/home/2018csb1094/Desktop/cs203FinalProject/project_1' since last save.
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/neeraj/eda/Vivado/2019.1/data/ip'.
-file mkdir /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v w ]
-add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v
 update_compile_order -fileset sources_1
-file mkdir /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v w ]
-add_files -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
-file delete -force /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/add3.v
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v w ]
-add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/equalTo.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/equalTo.v
 update_compile_order -fileset sources_1
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/sequence.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/sequence.v
 update_compile_order -fileset sources_1
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v w ]
-add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v] -no_script -reset -force -quiet
-remove_files  /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
-file delete -force /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
-update_compile_order -fileset sources_1
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v w ]
-add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v w ]
-add_files -fileset sim_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj testbench_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCD
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCDcheck
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/neeraj/eda/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3705] select index 8 into 'A' is out of bounds [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v:32]
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:46]
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:47]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-update_compile_order -fileset sim_1
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj testbench_vlog.prj
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/neeraj/eda/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-3705] select index 8 into 'A' is out of bounds [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v:32]
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:46]
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:47]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj testbench_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCD
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCDcheck
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/neeraj/eda/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:46]
-ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v:47]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj testbench_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCD
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCDcheck
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/neeraj/eda/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.BCD
-Compiling module xil_defaultlib.BCDcheck
-Compiling module xil_defaultlib.testbench
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_behav
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/sequence.xdc w ]
+add_files -fileset constrs_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/sequence.xdc
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 20:54:02 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 20:54:32 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 20:55:13 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
 
-****** Webtalk v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
-  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source /home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Nov 17 21:13:22 2019. For additional details about this file, please refer to the WebTalk help file at /home/neeraj/eda/Vivado/2019.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sun Nov 17 21:13:22 2019...
-run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 6927.273 ; gain = 0.000 ; free physical = 2003 ; free virtual = 14196
-INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-source testbench.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-A= 01111111 B=0100100111 C=1
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 7053.109 ; gain = 125.836 ; free physical = 1925 ; free virtual = 14129
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7053.109 ; gain = 0.000 ; free physical = 1977 ; free virtual = 14182
-launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xvlog --incr --relax -prj testbench_vlog.prj
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCD
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BCDcheck
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module testbench
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log
-Vivado Simulator 2019.1
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/neeraj/eda/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto e851ed7595624b0babe9247a0e315686 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.adder
-Compiling module xil_defaultlib.BCD
-Compiling module xil_defaultlib.BCDcheck
-Compiling module xil_defaultlib.testbench
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2019.1
-Time resolution is 1 ps
-source testbench.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-A= 01111110 B=0100100111 C=0
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/bcdmain.v w ]
-add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/bcdmain.v
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/bcdmain.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/bcdmain.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+ERROR: [Labtools 27-3165] End of startup status: LOW
+INFO: [Common 17-344] 'program_hw_devices' was cancelled
+set_property top sequence [current_fileset]
 update_compile_order -fileset sources_1
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+set_property target_constrs_file /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/sequence.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 20:57:53 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 20:59:04 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 20:59:32 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:00:14 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:01:45 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property is_enabled false [get_files  /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/bcd.xdc]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:03:30 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 21:03:59 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:04:39 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/sequence.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+reset_run synth_1
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:12:40 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 21:13:09 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:13:50 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/sequence.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/sequence.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+undo
+INFO: [Common 17-17] undo 'set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/sequence.bit} [get_hw_devices xc7a35t_0]'
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/main.v w ]
+add_files /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/main.v
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/sequence.xdc]
+close [ open /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/main.xdc w ]
+add_files -fileset constrs_1 /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/main.xdc
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:40:11 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 21:40:37 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:41:18 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property top main [current_fileset]
+update_compile_order -fileset sources_1
+set_property target_constrs_file /home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/main.xdc [current_fileset -constrset]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:42:47 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:43:48 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:45:02 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 21:45:32 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8738.605 ; gain = 0.000 ; free physical = 1953 ; free virtual = 12777
+Restored from archive | CPU: 0.020000 secs | Memory: 0.208626 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8738.605 ; gain = 0.000 ; free physical = 1953 ; free virtual = 12777
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8738.605 ; gain = 0.000 ; free physical = 1954 ; free virtual = 12779
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 8903.281 ; gain = 972.434 ; free physical = 1872 ; free virtual = 12699
+INFO: [Common 17-344] 'open_run' was cancelled
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:46:28 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 21:55:34 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 21:56:05 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 21:57:05 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:03:19 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:04:55 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 22:06:24 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:08:08 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:10:10 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 22:11:13 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:18:13 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:18:53 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:20:37 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:21:06 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:22:06 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:22:33 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 22:23:17 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Wed Nov 20 22:31:36 2019] Launched synth_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Wed Nov 20 22:32:04 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Nov 20 22:32:46 2019] Launched impl_1...
+Run output will be captured here: /home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1/main.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A75BE7A
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 17 21:21:42 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 20 22:36:41 2019...

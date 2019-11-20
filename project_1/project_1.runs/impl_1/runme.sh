@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.runs/impl_1'
+HD_PWD='/home/2018csb1111/cs203FinalProject/project_1/project_1.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log bcdmain.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source bcdmain.tcl -notrace
+EAStep vivado -log main.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
 
 

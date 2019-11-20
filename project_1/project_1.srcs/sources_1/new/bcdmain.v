@@ -25,8 +25,8 @@ module bcdmain(
         input [9:0]bcdin,
         input reset,
         output outp,
-        output reg [7:0] ent,
-        output reg new_clk
+        output reg [7:0] ent
+//        output reg new_clk
     );
     
 //    reg [7:0] ent;
@@ -42,25 +42,27 @@ module bcdmain(
     
     initial begin
         ctr <= 0;
+        ent <=0;
         bin <= 0;
         dummybcd <=0;
         state <=0;
-        new_clk=0;
+//        new_clk=0;
         
     end
     
-    always @(posedge new_clk)
+    always @(posedge clk)
     begin
         if(reset==0)
         begin
             case( state )
             2'b00:
             begin
-                bin <= bin<<1;
-                bin[0] <= inp;
+                ent <= ent<<1;
+                ent[0] <= inp;
+//                ent <= bin;
                 ctr <= ctr+1;
-                if(ctr==10)begin
-                    ent <= bin;
+                if(ctr==8)begin
+//                    ent <= bin;
                     state <= 2'b01;
                     
                 end
@@ -78,6 +80,7 @@ module bcdmain(
         
         else begin
             ctr <= 0;
+            
             bin <= 0;
             state <=0;
             ent <= 0;
@@ -86,15 +89,15 @@ module bcdmain(
         end        
     end
     
-    reg [32:0]div=0;
-    always @(posedge clk)begin
-        div<=div+1;
-        if (div == 200000000)
-        begin 
-            div <=0;
-            new_clk <=~new_clk;
-        end
-    end
+//    reg [32:0]div=0;
+//    always @(posedge clk)begin
+//        div<=div+1;
+//        if (div == 200000000)
+//        begin 
+//            div <=0;
+//            new_clk <=~new_clk;
+//        end
+//    end
 endmodule
 
 `timescale 1ns / 1ps
