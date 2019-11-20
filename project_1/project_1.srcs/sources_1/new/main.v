@@ -48,6 +48,12 @@ module main(
     wire dummyans;
     sequence U2(dummyA, dummyB, dummylock, new_clk,dummyin, dummyparin, dummyans);
     
+    reg[7:0] dummyAQM;
+    reg [3:0] dummynum_t;
+    reg[1:0]dummycost_t;
+    wire ans;
+    
+    qm U3(dummyAQM,dummynum_t,dummycost_t,new_clk,ans);
     always @(posedge clk) begin
     case(fx)
     2'b00:led[14:0]<=32767;
@@ -69,7 +75,14 @@ module main(
         led[3:0] <= dummyparin;
         led[13] <= dummyans;
     end
-    
+    2'b11:begin
+        led[14:0] <=0;
+        dummyAQM <= sw[7:0];
+        dummynum_t <= sw[11:8];
+        dummycost_t <= sw[13:12];
+        
+        led[13]<=ans;
+    end
     endcase
     end
 endmodule

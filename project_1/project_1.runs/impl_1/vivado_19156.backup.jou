@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov 21 00:08:47 2019
+# Process ID: 19156
+# Current directory: /home/2018csb1111/Desktop/cs203FinalProject/project_1/project_1.runs/impl_1
+# Command line: vivado -log qm.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source qm.tcl -notrace
+# Log file: /home/2018csb1111/Desktop/cs203FinalProject/project_1/project_1.runs/impl_1/qm.vdi
+# Journal file: /home/2018csb1111/Desktop/cs203FinalProject/project_1/project_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source qm.tcl -notrace

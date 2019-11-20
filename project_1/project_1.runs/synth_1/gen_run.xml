@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1574269296">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1574275391">
   <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="main.dcp"/>
@@ -46,6 +46,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/qm.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/sequence.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -83,6 +90,13 @@
     </File>
     <File Path="$PSRCDIR/constrs_1/new/main.xdc">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/qm.xdc">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
