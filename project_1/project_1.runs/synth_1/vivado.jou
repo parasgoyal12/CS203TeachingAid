@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Nov 21 21:12:45 2019
-# Process ID: 26667
+# Start of session at: Thu Nov 21 22:36:39 2019
+# Process ID: 5483
 # Current directory: /home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.runs/synth_1/main.vds

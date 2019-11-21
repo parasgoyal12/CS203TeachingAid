@@ -27,7 +27,7 @@ module sequence(
     input clk,
     input serialin,
     output reg [3:0]parallelin,
-    output reg ans
+    output wire ans
 //    input new_clk
 //    output reg new_clk
     );
@@ -43,11 +43,12 @@ module sequence(
 //        end
 //    end
 //    reg [3:0] dummyA,dummyB;
+assign ans=(!(A^parallelin))| (!(B^parallelin));
     initial begin
      parallelin <=0;
 //    dummyA=0;
 //    dummyB=0;
-   ans=0;
+//   assign ans=0;
 //   ans2A =0;
 //   ans2B = 0;
     
@@ -59,7 +60,7 @@ module sequence(
     case(lock) 
         1'b0: begin
         parallelin=0;
-        ans=0;
+//        ans=0;
         end
         1'b1: begin
                parallelin <= parallelin<<1;
@@ -69,7 +70,7 @@ module sequence(
 //                    else if(ans2B && serialin == B[0]) ans<= 1;
 //                    else ans<= 0;
                               
-               ans<= (!(A^parallelin))| (!(B^parallelin));
+//               ans<= (!(A^parallelin))| (!(B^parallelin));
 //                ans <= (A==parallelin) | (B==parallelin);
 //                if(A[3:1]==parallelin[2:0]) begin
 //                    ans2A <= 1;

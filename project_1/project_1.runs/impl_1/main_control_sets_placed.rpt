@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Nov 21 21:13:43 2019
+| Date         : Thu Nov 21 22:37:47 2019
 | Host         : cslab-ThinkCentre-M910s running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    10 |
+|    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    32 |
+| Unused register locations in slices containing registers |    33 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
+| Total control sets |    10 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     2 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     2 |
-| >= 16              |     3 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |           11 |
+| No           | No                    | No                     |              21 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              68 |           18 |
-| Yes          | No                    | No                     |              36 |           13 |
+| No           | Yes                   | No                     |              64 |           16 |
+| Yes          | No                    | No                     |              36 |           14 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              31 |           10 |
+| Yes          | Yes                   | No                     |              30 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,16 +74,15 @@ Table of Contents
 |    Clock Signal    |   Enable Signal   |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
 +--------------------+-------------------+--------------------------+------------------+----------------+
 |  new_clk_OBUF_BUFG |                   |                          |                2 |              2 |
-|  clk_IBUF_BUFG     |                   | fx_IBUF[1]               |                2 |              4 |
-|  new_clk_OBUF_BUFG | dummylock         | U2/parallelin[3]_i_1_n_0 |                1 |              5 |
-|  new_clk_OBUF_BUFG | U1/state[0]       | dummyreset_reg_n_0       |                4 |             10 |
+|  new_clk_OBUF_BUFG | dummylock         | U2/parallelin[3]_i_1_n_0 |                2 |              4 |
+|  new_clk_OBUF_BUFG | U1/state[0]       | dummyreset_reg_n_0       |                2 |             10 |
 |  clk_IBUF_BUFG     | dummyin           |                          |                3 |             10 |
 |  clk_IBUF_BUFG     | dummyreset        |                          |                4 |             12 |
-|  clk_IBUF_BUFG     | dummycost_t       |                          |                6 |             14 |
-|  clk_IBUF_BUFG     |                   |                          |                9 |             15 |
-|  new_clk_OBUF_BUFG | U1/ent[7]_i_1_n_0 | dummyreset_reg_n_0       |                5 |             16 |
+|  clk_IBUF_BUFG     | dummycost_t       |                          |                7 |             14 |
+|  new_clk_OBUF_BUFG | U1/ent[7]_i_1_n_0 | dummyreset_reg_n_0       |                3 |             16 |
+|  clk_IBUF_BUFG     |                   |                          |                7 |             19 |
+|  clk_IBUF_BUFG     |                   | div[32]_i_1_n_0          |                8 |             32 |
 |  clk_IBUF_BUFG     |                   | new_clk2                 |                8 |             32 |
-|  clk_IBUF_BUFG     |                   | new_clk__0               |                8 |             32 |
 +--------------------+-------------------+--------------------------+------------------+----------------+
 
 

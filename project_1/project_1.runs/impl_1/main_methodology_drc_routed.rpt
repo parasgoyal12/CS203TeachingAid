@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu Nov 21 21:13:55 2019
+| Date         : Thu Nov 21 22:38:00 2019
 | Host         : cslab-ThinkCentre-M910s running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 65
+             Violations found: 64
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 33         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 32         |
 | TIMING-18 | Warning          | Missing input or output delay | 32         |
 +-----------+------------------+-------------------------------+------------+
 
@@ -170,30 +170,25 @@ Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin U2/ans_reg/C is not reached by a timing clock
+The clock pin U2/parallelin_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin U2/parallelin_reg[0]/C is not reached by a timing clock
+The clock pin U2/parallelin_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin U2/parallelin_reg[1]/C is not reached by a timing clock
+The clock pin U2/parallelin_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin U2/parallelin_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#32 Critical Warning
-Non-clocked sequential cell  
 The clock pin U2/parallelin_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#33 Critical Warning
+TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
 The clock pin U3/ans_reg/C is not reached by a timing clock
 Related violations: <none>
