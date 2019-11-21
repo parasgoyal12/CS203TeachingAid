@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
@@ -68,7 +69,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 2
   open_checkpoint main_routed.dcp
-  set_property webtalk.parent_dir /home/2018csb1111/Desktop/cs203FinalProject/project_1/project_1.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.cache/wt [current_project]
   catch { write_mem_info -force main.mmi }
   write_bitstream -force main.bit 
   catch {write_debug_probes -quiet -force main}

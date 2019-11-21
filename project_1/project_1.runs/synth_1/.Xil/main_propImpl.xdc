@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/2018csb1111/Desktop/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/main.xdc rfile:../../../project_1.srcs/constrs_1/new/main.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/constrs_1/new/main.xdc rfile:../../../project_1.srcs/constrs_1/new/main.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

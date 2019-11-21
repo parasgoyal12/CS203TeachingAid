@@ -36,6 +36,17 @@ module main(
             new_clk <=~new_clk;
         end
     end
+    reg new_clk2;
+    reg [32:0]div2=0;
+    always @(posedge clk)begin
+        div2<=div2+1;
+        if (div2 == 50000000)
+        begin 
+            div2 <=0;
+            new_clk2 <=~new_clk2;
+        end
+    end
+    
     reg dummybin,dummyreset;
     wire dummyoutp;
     reg [9:0]dummybcdin;
@@ -56,7 +67,12 @@ module main(
     qm U3(dummyAQM,dummynum_t,dummycost_t,new_clk,ans);
     always @(posedge clk) begin
     case(fx)
-    2'b00:led[14:0]<=32767;
+    2'b00:begin
+//        led[0] <= !(sw[0] & sw[1]);
+//        led[2] <= !(sw[2] | sw[3]);
+        if(new_clk2) led[14:0] <= 15'b010101010101010;
+        else led[14:0] <= 15'b101010101010101;
+    end
     2'b01:begin
         led[14:0]<=0;
         dummybin <= sw[12];

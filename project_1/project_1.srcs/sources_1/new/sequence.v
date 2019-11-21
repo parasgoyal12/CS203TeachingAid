@@ -28,8 +28,10 @@ module sequence(
     input serialin,
     output reg [3:0]parallelin,
     output reg ans
+//    input new_clk
 //    output reg new_clk
     );
+//    reg ans2A, ans2B;
     
 //    reg [32:0]div=0;
 //    always @(posedge clk)begin
@@ -46,11 +48,13 @@ module sequence(
 //    dummyA=0;
 //    dummyB=0;
    ans=0;
+//   ans2A =0;
+//   ans2B = 0;
     
     end
-    wire out1,out2;
-    equalTo u1(A,parallelin,out1);
-    equalTo u2(B,parallelin,out2);
+//    wire out1,out2;
+//    equalTo u1(A,parallelin,out1);
+//    equalTo u2(B,parallelin,out2);
     always @(posedge clk) begin
     case(lock) 
         1'b0: begin
@@ -60,7 +64,21 @@ module sequence(
         1'b1: begin
                parallelin <= parallelin<<1;
                parallelin[0] <= serialin;
-               ans<= out1| out2;
+               
+//                    if(ans2A && serialin == A[0]) ans<=1;
+//                    else if(ans2B && serialin == B[0]) ans<= 1;
+//                    else ans<= 0;
+                              
+               ans<= (!(A^parallelin))| (!(B^parallelin));
+//                ans <= (A==parallelin) | (B==parallelin);
+//                if(A[3:1]==parallelin[2:0]) begin
+//                    ans2A <= 1;
+//                end
+//                else ans2A<=0;
+                
+//                if(B[3:1]==parallelin[2:0]) ans2B<=1;
+//                else ans2B<=0;
+                
         end
     endcase
     end
@@ -69,5 +87,8 @@ module sequence(
 //    1'b0: ans<= 0;
 //    1'b1: ans
 //    endcase
+//    end
+//    always @(posedge new_clk)begin
+//    ans<= (!(A^parallelin))| (!(B^parallelin));
 //    end
 endmodule

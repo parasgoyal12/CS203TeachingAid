@@ -2,8 +2,8 @@
 2019.1
 May 24 2019
 14:51:52
-/home/2018csb1111/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
-/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v,1574005415,verilog,,,,testbench,,,,,,,,
-/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v,1574005390,verilog,,/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v,,BCD,,,,,,,,
-/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v,1574005342,verilog,,/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v,,BCDcheck,,,,,,,,
-/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v,1574004281,verilog,,/home/2018csb1111/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v,,adder,,,,,,,,
+/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1574347486,verilog,,,,glbl,,,,,,,,
+/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v,1574347486,verilog,,,,testbench,,,,,,,,
+/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCD.v,1574347486,verilog,,/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v,,BCD,,,,,,,,
+/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sources_1/new/BCDcheck.v,1574347486,verilog,,/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v,,BCDcheck,,,,,,,,
+/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sources_1/new/adder.v,1574347486,verilog,,/home/2018csb1094/Desktop/cs203FinalProject/project_1/project_1.srcs/sim_1/new/testbench.v,,adder,,,,,,,,
