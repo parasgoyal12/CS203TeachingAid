@@ -9,6 +9,7 @@ sw[15] and sw[14] define the working mode as follows:
 11-> Quine Mcqulsey for 3 variables verification
 
 led[15] represents a clock with T=2s and inputs are changes when this led is off.
+
 An on-paper design has been uploaded as well.
 
 ### State 01: BCD converter
